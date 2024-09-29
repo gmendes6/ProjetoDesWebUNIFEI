@@ -9,12 +9,13 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "deploy": "npm run build && gh-pages -d dist",
-    "serve": "node server.js"  // Script para rodar o servidor Express no ambiente local
+    "serve": "node server.js"
   },
   "homepage": "https://gmendes6.github.io/ProjetoDesWebUNIFEI",
   "dependencies": {
-    "express": "^4.21.0",         // Mantém o Express para SSR ou API Routes
+    "express": "^4.21.0",
     "framer-motion": "^11.3.28",
+    "my-project": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-icons": "^5.3.0",
@@ -27,13 +28,13 @@
     "@eslint/js": "^9.9.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.1",  // Plugin React para Vite
-    "autoprefixer": "^10.4.20",        // Para usar com Tailwind e PostCSS
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9.9.0",
     "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "gh-pages": "^5.0.0",
-    "postcss": "^8.4.41",              // Necessário para Tailwind CSS
+    "postcss": "^8.4.41",
     "tailwindcss": "^3.4.10"
   }
 }
