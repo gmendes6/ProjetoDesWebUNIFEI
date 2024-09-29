@@ -1,6 +1,9 @@
 {
     "routes": [
-      { "src": "/(.*)", "dest": "/" }
+      {
+        "src": "/(.*)",  // Captura todas as rotas
+        "dest": "/"      // Redireciona para a raiz (index.html)
+      }
     ]
   }
   
