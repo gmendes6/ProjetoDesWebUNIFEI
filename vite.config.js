@@ -2,6 +2,16 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  base: '/',  // Caminho base para sites na raiz
   plugins: [react()],
+  build: {
+    ssr: 'src/entry-server.jsx',
+    rollupOptions: {
+      input: {
+        server: './server.js',
+      },
+    },
+  },
+  server: {
+    middlewareMode: true,
+  },
 });
