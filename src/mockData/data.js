@@ -36,7 +36,7 @@ export const NavbarMenu = [
   {
     id: 6, // Novo Item Adicionado
     title: "Comentários",
-    link: "/index2.html", // Link para a segunda página
+    link: "/ProjetoDesWebUNIFEI/index2.html", // Link para a segunda página
   },
 ];
 

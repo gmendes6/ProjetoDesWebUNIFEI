@@ -2,20 +2,21 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 
-// Não precisa de __dirname
+// Altere 'repository-name' para o nome do seu repositório no GitHub
 export default defineConfig({
+  base: '/ProjetoDesWebUNIFEI/', // O nome do seu repositório no GitHub
   plugins: [react()],
-  resolve: {
-    alias: {
-      '@': resolve('src'), // 'src' será resolvido a partir da raiz do projeto
-    },
-  },
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),
-        segunda: resolve(__dirname, 'index2.html'),
-      },
+        main: resolve(__dirname, 'index.html'),   // Página principal
+        segunda: resolve(__dirname, 'index2.html') // Segunda página
+      }
+    }
+  },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'), // Alias para a pasta src
     },
   },
 })
