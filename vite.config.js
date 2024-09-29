@@ -4,14 +4,15 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   build: {
-    ssr: 'src/entry-server.jsx',
     rollupOptions: {
       input: {
-        server: './server.js',
+        main: './index.html',
       },
     },
   },
-  server: {
-    middlewareMode: true,
+  resolve: {
+    alias: {
+      '@': '/src',
+    },
   },
 });
