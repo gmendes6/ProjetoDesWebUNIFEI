@@ -11,7 +11,7 @@ export const NavbarMenu = [
   {
     id: 1,
     title: "Página Principal",
-    link: "/index.html", // Link para a página inicial
+    link: "/",
   },
   {
     id: 2,
@@ -36,7 +36,7 @@ export const NavbarMenu = [
   {
     id: 6, // Novo Item Adicionado
     title: "Comentários",
-    link: "/ProjetoDesWebUNIFEI/index2.html", // Link para a segunda página
+    link: "/segunda", // Link para a segunda página
   },
 ];
 

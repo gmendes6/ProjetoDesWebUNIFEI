@@ -1,22 +1,17 @@
 import React from "react";
-import Navbar from "./components/Navbar/Navbar";
-import Equipments from "./components/Equipments/Equipments";
-import TabComp from "./components/Tab/TabComp";
-import Testimonials from "./components/Testimonials/Testimonials";
-import Footer from "./components/Footer/Footer";
-import Banner2 from "./components/Banner/Banner2"
-
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./components/Navbar/Navbar";  // Certifique-se de que o caminho está correto
+import HomePage from "./pages/HomePage";
+import SegundaPagina from "./pages/SegundaPagina";
 
 const App = () => {
   return (
-    <div className="overflow-x-hidden">
-      <Navbar />
-      <Equipments />
-      <TabComp />
-      <Testimonials />
-      <Banner2/>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/segunda" element={<SegundaPagina />} />
+      </Routes>
+    </Router>
   );
 };
 
