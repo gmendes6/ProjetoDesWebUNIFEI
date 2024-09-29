@@ -1,18 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";  // Certifique-se de que o caminho está correto
-import HomePage from "./pages/HomePage";
-import SegundaPagina from "./pages/segundaPagina";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const App = () => {
+
+import { useEffect } from "react";
+
+import { AppRoutes } from "./routes";
+
+function App() {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/segunda" element={<SegundaPagina />} />
-      </Routes>
-    </Router>
+    <AppRoutes/>
   );
-};
+}
 
 export default App;

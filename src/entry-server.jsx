@@ -1,12 +1,24 @@
-import React from "react";
-import ReactDOMServer from "react-dom/server";
-import { StaticRouter } from "react-router-dom/server";
-import App from "./App";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-export function render(url, context) {
-  return ReactDOMServer.renderToString(
-    <StaticRouter location={url} context={context}>
-      <App />
-    </StaticRouter>
+
+import { useEffect } from "react";
+
+import { AppRoutes } from "./routes";
+
+function App() {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 500,
+      easing: "ease-in-sine",
+      delay: 100,
+    });
+    AOS.refresh();
+  }, []);
+  return (
+    <AppRoutes/>
   );
 }
+
+export default App;
