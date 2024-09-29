@@ -1,12 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react"; // Combinei ambos os imports
 import Navbar from "../components/Navbar/Navbar";
 import Equipments from "../components/Equipments/Equipments";
 import TabComp from "../components/Tab/TabComp";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Footer from "../components/Footer/Footer";
-import Banner2 from "../components/Banner/Banner2"
-
-import React, { useEffect, useState } from "react"
+import Banner2 from "../components/Banner/Banner2";
 
 const HomePage = () => {
   const [data, setData] = useState(null);
@@ -21,11 +19,12 @@ const HomePage = () => {
 
   return (
     <div>
-     <Navbar />
+      <Navbar />
       <Equipments />
       <TabComp />
       <Testimonials />
-      <Banner2/>
+      <Banner2 />
+      <Footer />
       <p>{data ? data : "Loading data from API..."}</p>
     </div>
   );
